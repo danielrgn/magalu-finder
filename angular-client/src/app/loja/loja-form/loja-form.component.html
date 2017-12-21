@@ -1,0 +1,26 @@
+<app-loja-header [titulo]="titulo" [color]="color" [nomeBotao]="nomeBotao" [link]="link" [icone]="icone"></app-loja-header>
+<div class="row">
+  <form class="col s12" #frm="ngForm" (ngSubmit)="salvar(frm)">
+    <div class="row">
+      <div class="input-field col s4">
+        <input id="codigoFilial" name="codigoFilial" type="number" [(ngModel)]="loja.codigoFilial" class="validate" required>
+        <label for="codigoFilial">Nº. Loja Filial</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="nomeLoja" name="nomeLoja" type="text" [(ngModel)]="loja.nomeLoja" class="validate" required>
+        <label for="nomeLoja">Nome da Loja</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="cep" name="cep" min="0" max="99999999" [(ngModel)]="loja.cep" type="number" class="validate" required>
+        <label for="cep">CEP</label>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 right-align">
+          <button class="btn waves-effect waves-light" type="submit" [disabled]="!frm.valid" name="action">Salvar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

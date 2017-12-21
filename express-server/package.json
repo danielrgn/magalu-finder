@@ -1,0 +1,33 @@
+{
+  "name": "magalu-finder",
+  "version": "1.0.0",
+  "description": "Está aplicação será responsável por ajudar clientes do Magalu a encontrarem as lojas mais próximas que possuem o produto desejado.",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielrgn/magalu-finder.git"
+  },
+  "author": "Daniel Rigoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielrgn/magalu-finder/issues"
+  },
+  "homepage": "https://github.com/danielrgn/magalu-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.2",
+    "express": "^4.13.3",
+    "google-distance-matrix": "^1.1.1",
+    "mongoose": "^4.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.14.1"
+  }
+}

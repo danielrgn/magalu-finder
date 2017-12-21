@@ -1,0 +1,17 @@
+<app-produto-header [titulo]="titulo" [color]="color" [nomeBotao]="nomeBotao" [link]="link" [icone]="icone"></app-produto-header>
+<table class="responsive-table centered" *ngIf="produtos.length > 0">
+  <thead>
+    <tr>
+        <th>Cód. Produto</th>
+        <th>Nome do Produto</th>
+        <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of produtos">
+      <td>{{prod.codigoProduto}}</td>
+      <td>{{prod.nomeProduto}}</td>
+      <td>{{prod.valor | currency:"BRL":true}}</td>
+    </tr>
+  </tbody>
+</table>

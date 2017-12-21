@@ -1,0 +1,39 @@
+<div class="row">
+  <form class="col s12" #frm="ngForm" (ngSubmit)="pesquisarLojas(frm)">
+    <div class="col s12 left-align"><h4>Pesquise seu produto desejado:</h4></div>
+    <div class="input-field col s6">
+      <input id="nomeCodProduto" name="nomeCodProduto" [(ngModel)]="nomeCodProduto" type="text" class="validate" required>
+      <label for="nomeProduto">Digite o nome ou código do produto</label>
+    </div>
+    <div class="input-field col s3">
+      <input id="cep" name="cep" type="number" [(ngModel)]="cep" class="validate" required>
+      <label for="cep">Digite seu CEP</label>
+    </div>
+    <div class="input-field col s3">
+      <button class="btn waves-effect waves-light" style="width:100%" type="submit" [disabled]="!frm.valid" name="action">Pesquisar
+        <i class="material-icons left">search</i>
+      </button>
+    </div>
+    <div class="progress" *ngIf="loading">
+      <div class="indeterminate"></div>
+    </div>
+  </form>
+</div>
+<div class="row" *ngIf="lojas.length > 0">
+  <div class="col s12 m4" *ngFor="let loja of lojas">
+    <div class="card blue darken-2">
+      <div class="card-content white-text">
+        <span class="card-title"><b>{{ loja.codigoFilial }} - {{ loja.nomeLoja }}</b></span>
+        <br/>
+        <p *ngIf="loja.distancia !== undefined"><i class="material-icons tiny">place</i>Você está há {{ loja.distancia }}</p>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator yellow-text text-accent-2" (click)="pesquisarProdutos(loja);">Ver produtos<i class="material-icons right">more_vert</i></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><b>Produtos</b><i class="material-icons right">close</i></span>
+        <p *ngFor="let produto of loja.produtos"> • {{ produto.nomeProduto }} - {{ produto.valor | currency:"BRL":true }}</p>
+      </div>
+    </div>
+  </div>
+</div>

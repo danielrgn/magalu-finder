@@ -1,0 +1,17 @@
+<app-loja-header [titulo]="titulo" [color]="color" [nomeBotao]="nomeBotao" [link]="link" [icone]="icone"></app-loja-header>
+<table class="responsive-table centered" *ngIf="lojas.length > 0">
+  <thead>
+    <tr>
+        <th>Nº. Loja Filial</th>
+        <th>Nome da Loja</th>
+        <th>CEP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let loja of lojas">
+      <td>{{loja.codigoFilial}}</td>
+      <td>{{loja.nomeLoja}}</td>
+      <td>{{loja.cep}}</td>
+    </tr>
+  </tbody>
+</table>

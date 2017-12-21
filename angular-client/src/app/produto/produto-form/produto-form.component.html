@@ -1,0 +1,32 @@
+<app-produto-header [titulo]="titulo" [color]="color" [nomeBotao]="nomeBotao" [link]="link" [icone]="icone"></app-produto-header>
+<div class="row">
+  <form class="col s12" #frm="ngForm" (ngSubmit)="salvar(frm)">
+    <div class="row">
+      <div class="input-field col s3">
+        <select materialize="material_select" name="idLoja" [(ngModel)]="produto.idLoja" required [materializeSelectOptions]="selectOptions">
+          <option *ngFor="let l of lojas" [value]="l._id">{{l.codigoFilial}} - {{l.nomeLoja}}</option>
+        </select>
+        <label>Loja</label>
+      </div>
+      <div class="input-field col s3">
+        <input id="codigoProduto" name="codigoProduto" type="text" [(ngModel)]="produto.codigoProduto" class="validate" required>
+        <label for="codigoProduto">Código do Produto</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="nomeProduto" name="nomeProduto" type="text" [(ngModel)]="produto.nomeProduto" class="validate" required>
+        <label for="nomeProduto">Nome Produto</label>
+      </div>
+      <div class="input-field col s2">
+        <input id="valor" name="valor" currencyMask [(ngModel)]="produto.valor" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" type="text" class="validate" required>
+        <label for="valor">Valor do Produto</label>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 right-align">
+          <button class="btn waves-effect waves-light" type="submit" [disabled]="!frm.valid" name="action">Salvar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

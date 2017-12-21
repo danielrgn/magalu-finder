@@ -1,0 +1,15 @@
+{
+    "success":{
+        "ok" : "200",
+        "create" : "201",
+        "accept" : "202",
+        "not_cnt" : "204"
+    },
+    "errClient":{
+        "req_inv" : "400",
+        "not_fnd" : "404"
+    },
+    "errServer":{
+        "error" : "500"
+    }
+}
