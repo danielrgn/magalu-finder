@@ -1,7 +1,11 @@
 Magalu-Finder
 =================
 
-O Magalu-Finder é uma aplicação que ajuda os clientes do Magalu a encontrarem as lojas mais próximas, cujo os produtos desejados pelo cliente, sejam exibidos pra ele.
+O Magalu-Finder é uma aplicação que ajuda os clientes do Magalu a encontrarem o produto desejado, nas lojas mais próximas ao cliente, atráves do seu CEP.
+
+### Funcionalidades do Gestor de Lojas
+Como administrador do **Magalu-Finder** é possível cadastras as lojas (**Nome da loja**, **Código de filial** e **CEP**), e também produtos (**Código do produto**, **Nome do produto** e **Valor de venda**).
+
 
 Como fazer o Build utilizando Docker
 ---------------
