@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha",
-    "start": "npm start"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielrgn/magalu-finder.git"
+    "url": "https://github.com/danielrgn/magalu-finder.git"
   },
   "author": "Daniel Rigoni",
   "license": "ISC",
