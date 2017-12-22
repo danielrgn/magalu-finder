@@ -1,13 +1,10 @@
-# magalu-finder
+# express-server
+---------------
 
-## sub title
+## Development server
 
-** bold ** dasdasdsa *italic* dasdsa
+Run `npm start` or `nodemon server` for a dev server. Navigate to `http://localhost:3000/`. 
 
-```bash
+## Running unit tests
 
-# dsadasd
-dasdasdsa
-dasdasdsa
-
-```
+Run `mocha` to execute the unit tests via [Mocha](https://mochajs.org/).
